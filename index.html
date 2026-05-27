@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle Royale</title>
+  <script data-goatcounter="https://steffenhuck.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f3ee;
+      --text: #2a2a2a;
+      --muted: #6a6a6a;
+      --accent: #3d4d20;
+      --max-width: 820px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Source Serif 4", serif;
+      font-size: 22px;
+      line-height: 1.42;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 48px 28px 72px;
+    }
+
+    /* --- TITLE BLOCK --- */
+    .title {
+      text-align: center;
+      font-family: "Bangers", cursive;
+      font-size: clamp(3.6rem, 6.5vw, 5.4rem);
+      letter-spacing: 0.11em;
+      margin: 0 0 10px 0;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-family: "Bangers", cursive;
+      font-size: 2.2rem;
+      letter-spacing: 0.08em;
+      margin: 8px 0 34px 0;
+      color: var(--accent);
+    }
+
+    .cast {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .cast-title {
+      font-family: "Bangers", cursive;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .cast div:not(.cast-title) {
+      font-size: 1.2rem;
+      margin: 2px 0;
+    }
+
+    /* --- IMAGE --- */
+    .visual {
+      display: block;
+      width: 100%;
+      max-width: 480px;
+      margin: 28px auto 48px auto;
+    }
+
+    /* --- ACT HEADERS --- */
+    .act-header {
+      font-family: "Bangers", cursive;
+      font-size: 2rem;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      text-align: center;
+      margin: 3rem 0 1.8rem;
+      border-top: 2px solid var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding: 0.4rem 0;
+    }
+
+    /* --- PLAY TEXT --- */
+    .play { margin: 0; }
+
+    .speaker {
+      font-family: "Bangers", cursive;
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      margin: 0 0 4px 0;
+      color: var(--accent);
+    }
+
+    .line {
+      margin: 0 0 14px 1.8em;
+    }
+
+    .stage {
+      margin: 0 0 12px 0;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.96em;
+    }
+
+    .line + .stage { margin-top: -6px; }
+    .stage + .speaker { margin-top: 6px; }
+
+    /* --- SIGNATURE --- */
+    .signature {
+      text-align: center;
+      margin-top: 70px;
+      font-family: "Source Serif 4", serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.22em;
+      text-transform: lowercase;
+    }
+
+    .signature a {
+      text-decoration: none;
+      color: var(--muted);
+    }
+
+    /* --- MOBILE --- */
+    @media (max-width: 700px) {
+      body { font-size: 20px; line-height: 1.4; }
+      .container { padding: 30px 18px 56px; }
+      .title { white-space: normal; line-height: 0.9; letter-spacing: 0.08em; }
+      .subtitle { font-size: 1.8rem; margin: 10px 0 30px; }
+      .line { margin-left: 1.4em; margin-bottom: 12px; }
+      .stage { margin-bottom: 10px; font-size: 0.95em; }
+      .speaker { font-size: 1.4rem; letter-spacing: 0.045em; }
+      .visual { margin: 24px auto 40px; }
+      .signature { margin-top: 60px; letter-spacing: 0.18em; }
+      .act-header { font-size: 1.7rem; margin: 2rem 0 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1 class="title">Battle Royale</h1>
+    <p class="subtitle">A Play in Five Acts</p>
+
+    <div class="cast">
+      <div class="cast-title">Cast</div>
+      <div>The Instructor &nbsp;·&nbsp; Yadya &nbsp;·&nbsp; The First Student</div>
+      <div>The New Student &nbsp;·&nbsp; The Most Senior Student &nbsp;·&nbsp; The Other Students</div>
+    </div>
+
+    <img class="visual" src="knife.png" alt="A hunting knife">
+
+    <div class="play">
+
+      <div class="act-header">Act 1</div>
+
+      <p class="stage">(The computer lab at the Institute for the Advancement of Dictatorships. The students sit behind their screens. The Instructor stands at the front, a stopwatch in his right hand.)</p>
+
+      <div class="speaker">The Instructor</div>
+      <p class="line">You will now write an essay on the Deep Value Theory of Labour. You have one hour. Your essays will be graded instantaneously by the latest addition to our family. Her name is Yadya. You haven't met her yet. She is an AI, an AI trained on the institute's thoughts.</p>
+
+      <p class="stage">(A beat.)</p>
+
+      <div class="speaker">The Instructor</div>
+      <p class="line">The winner of the essay competition will be safe from what follows. The loser will receive a hunting knife. The Caretaker sharpened it this morning.</p>
+
+      <p class="stage">(A beat.)</p>
+
+      <div class="speaker">The Instructor</div>
+      <p class="line">Then Part 2 will begin. It will end twenty-four hours after I start my watch. And then one of you shall leave the institute.</p>
+
+      <p class="stage">(The Instructor clicks his stopwatch. The students begin to type.)</p>
+
+      <p class="stage">(Lights fade out and back in.)</p>
+
+      <div class="speaker">The Instructor</div>
+      <p class="line">And that concludes Part 1. Yadya, what is your verdict?</p>
+
+      <div class="speaker">Yadya</div>
+      <p class="stage">(through a loudspeaker at the front)</p>
+      <p class="line">My verdict is simple and clear. The First Student wrote the best essay. Nobody has expressed the potential of slave labour for the stability of autocratic governance in the future that awaits us all as he did. He wrote eloquently and sharply. The worst essay came from the Most Senior Student. Maybe not a surprise given that he has failed his finals three times already. But I must add — I read his essay in the same impartial way as I read all others. I was not biased by past performance. My judgement was based on words alone. He must be given the knife.</p>
+
+      <p class="stage">(The Instructor hands the knife to the Most Senior Student, who lowers his eyes.)</p>
+
+      <div class="act-header">Act 2</div>
+
+      <p class="stage">(The woods behind the institute's paddock. Night. All the Other Students assembled, with the exception of the Most Senior Student.)</p>
+
+      <div class="speaker">Other Student 1</div>
+      <p class="line">We isolated them.</p>
+
+      <div class="speaker">Other Student 2</div>
+      <p class="line">For good.</p>
+
+      <div class="speaker">Other Student 3</div>
+      <p class="line">We are safe.</p>
+
+      <div class="speaker">Other Student 1</div>
+      <p class="line">We must watch our backs.</p>
+
+      <div class="speaker">Other Student 2</div>
+      <p class="line">Twelve hours to go.</p>
+
+      <div class="speaker">Other Student 3</div>
+      <p class="line">Sounds long.</p>
+
+      <div class="speaker">Other Student 1</div>
+      <p class="line">We can't fall asleep.</p>
+
+      <div class="speaker">Other Student 2</div>
+      <p class="line">We must keep watch.</p>
+
+      <div class="speaker">Other Student 3</div>
+      <p class="line">We should alternate.</p>
+
+      <div class="speaker">Other Student 1</div>
+      <p class="line">We need one to the north.</p>
+
+      <div class="speaker">Other Student 2</div>
+      <p class="line">One to the south.</p>
+
+      <div class="speaker">Other Student 3</div>
+      <p class="line">One to the west.</p>
+
+      <div class="speaker">Other Student 4</div>
+      <p class="line">One to the east.</p>
+
+      <div class="speaker">Other Student 1</div>
+      <p class="line">We are twelve.</p>
+
+      <div class="speaker">Other Student 2</div>
+      <p class="line">That makes the math simple.</p>
+
+      <div class="speaker">Other Student 3</div>
+      <p class="line">It does.</p>
+
+      <div class="speaker">Other Students 4–12</div>
+      <p class="line">It does.</p>
+
+      <div class="speaker">Other Student 1</div>
+      <p class="line">Wanna bet?</p>
+
+      <div class="speaker">Other Students 2–12</div>
+      <p class="line">Yes.</p>
+
+      <div class="speaker">Other Student 2</div>
+      <p class="line">Ten quid on the New Student.</p>
+
+      <div class="speaker">Other Student 1</div>
+      <p class="line">He had it coming.</p>
+
+      <div class="speaker">Other Student 3</div>
+      <p class="line">No, the First.</p>
+
+      <div class="speaker">Other Student 4</div>
+      <p class="line">He's safe, dumbo.</p>
+
+      <div class="speaker">Other Students 5–12</div>
+      <p class="line">Safe.</p>
+
+      <div class="speaker">Other Students 3–12</div>
+      <p class="line">He had it coming bad.</p>
+
+      <div class="speaker">Other Student 1</div>
+      <p class="line">A democrat's son.</p>
+
+      <div class="speaker">Other Students 2–12</div>
+      <p class="line">Booo.</p>
+
+      <div class="speaker">Other Student 1</div>
+      <p class="line">Let's keep watch.</p>
+
+      <div class="act-header">Act 3</div>
+
+      <p class="stage">(The First Student, the New Student, and the Most Senior Student together in a rowing boat in the middle of the lake.)</p>
+
+      <div class="speaker">The New Student</div>
+      <p class="line">Ten minutes to go.</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">Looks like it will have to be one of us.</p>
+
+      <p class="stage">(The Most Senior Student holds his knife toward the others.)</p>
+
+      <div class="speaker">The New Student</div>
+      <p class="stage">(gesturing toward the First Student)</p>
+      <p class="line">He is safe.</p>
+
+      <div class="speaker">The Most Senior Student</div>
+      <p class="line">He is not. I can just stab him. Here and now.</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">A gap in the rules. I should complain.</p>
+
+      <div class="speaker">The Most Senior Student</div>
+      <p class="line">You didn't notice that?</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">I didn't.</p>
+
+      <div class="speaker">The Most Senior Student</div>
+      <p class="line">Why the fuck did you take me along with you then?</p>
+
+      <div class="speaker">The New Student</div>
+      <p class="line">Better to have the knife in one's team.</p>
+
+      <div class="speaker">The Most Senior Student</div>
+      <p class="line">So that I can bloody kill you?</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">There is no need for you to kill either of us.</p>
+
+      <div class="speaker">The Most Senior Student</div>
+      <p class="line">The others are safe.</p>
+
+      <div class="speaker">The New Student</div>
+      <p class="line">Safe from your knife.</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">But not from each other.</p>
+
+      <div class="speaker">The New Student</div>
+      <p class="line">They will get nervous now.</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">And they know we are a team.</p>
+
+      <div class="speaker">The New Student</div>
+      <p class="line">We have been a team for over twenty-two hours now.</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">They will all be very worried now.</p>
+
+      <div class="speaker">The New Student</div>
+      <p class="line">And one of them will realise —</p>
+
+      <div class="speaker">The Most Senior Student</div>
+      <p class="line">Realise what?</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">That they are forced to pick amongst themselves.</p>
+
+      <div class="speaker">The Most Senior Student</div>
+      <p class="line">None of them has a knife.</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">They have their hands.</p>
+
+      <div class="speaker">The New Student</div>
+      <p class="line">And hands are enough.</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">They are strangling each other as we speak.</p>
+
+      <div class="speaker">The Most Senior Student</div>
+      <p class="line">You are trying to trick me.</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">We are trying to save you.</p>
+
+      <div class="act-header">Act 4</div>
+
+      <p class="stage">(The other students, still in the grove behind the paddock.)</p>
+
+      <div class="speaker">Other Student 1</div>
+      <p class="line">Five minutes.</p>
+
+      <div class="speaker">Other Student 2</div>
+      <p class="line">Why didn't we hear anything yet?</p>
+
+      <div class="speaker">Other Student 3</div>
+      <p class="line">Didn't the Instructor say we would hear when it's over?</p>
+
+      <div class="speaker">Other Student 4</div>
+      <p class="line">I think so.</p>
+
+      <div class="speaker">Other Student 2</div>
+      <p class="line">Didn't he mention a trumpet call?</p>
+
+      <div class="speaker">Other Students 5–12</div>
+      <p class="line">Traa-raa!</p>
+
+      <div class="speaker">Other Student 1</div>
+      <p class="line">This is not funny.</p>
+
+      <div class="speaker">Other Student 2</div>
+      <p class="line">What if it's one of us?</p>
+
+      <div class="speaker">Other Student 3</div>
+      <p class="line">How could that happen?</p>
+
+      <div class="speaker">Other Student 1</div>
+      <p class="line">Because I might strangle you.</p>
+
+      <div class="speaker">Other Student 2</div>
+      <p class="line">I will strangle you first.</p>
+
+      <div class="speaker">Other Student 3</div>
+      <p class="stage">(looking at Other Student 4)</p>
+      <p class="line">I will strangle him.</p>
+
+      <div class="speaker">Other Student 4</div>
+      <p class="line">No. Me you.</p>
+
+      <p class="stage">(They all fall over each other trying to grab throats.)</p>
+
+      <div class="act-header">Act 5</div>
+
+      <p class="stage">(The First Student, the New Student, and the Most Senior Student still on the boat.)</p>
+
+      <div class="speaker">The New Student</div>
+      <p class="line">Two minutes.</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">We are all safe.</p>
+
+      <div class="speaker">The New Student</div>
+      <p class="line">We are a team.</p>
+
+      <div class="speaker">The Most Senior Student</div>
+      <p class="stage">(holding his knife at the New Student's throat)</p>
+      <p class="line">You are still trying to trick me.</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">He's not. One of the others will have been suffocated by now.</p>
+
+      <div class="speaker">The Most Senior Student</div>
+      <p class="line">I don't believe you.</p>
+
+      <div class="speaker">The New Student</div>
+      <p class="line">One minute. We almost made it.</p>
+
+      <div class="speaker">The Most Senior Student</div>
+      <p class="stage">(looking at the New Student)</p>
+      <p class="line">It's either you or me.</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">Calm down. We got this.</p>
+
+      <p class="stage">(The Most Senior Student moves the knife away from the New Student and holds it at his own throat.)</p>
+
+      <div class="speaker">The New Student</div>
+      <p class="line">Ten seconds.</p>
+
+      <div class="speaker">The First Student</div>
+      <p class="line">We all survived.</p>
+
+      <p class="stage">(The Most Senior Student slashes his own throat.)</p>
+
+    </div>
+
+    <div class="signature">
+      <a href="https://steffenhuck.github.io/">steffen huck</a>
+    </div>
+
+  </div>
+</body>
+</html>
